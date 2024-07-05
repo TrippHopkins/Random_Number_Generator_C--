@@ -5,13 +5,16 @@ int main(){
 
     srand(time(NULL));
 
-    int num1 = (rand() % 6) + 1;
-    int num2 = (rand() % 6) + 1;
-    int num3 = (rand() % 6) + 1;
-
-    std::cout << num1 << '\n';
-    std::cout << num2 << '\n';
-    std::cout << num3 << '\n';
+    int num1 = (rand() % 400 ) + 1;
+    if(num1 == 400){
+        std::cout << "You Dropped NECRONS HANDLE";
+    }
+    else if(num1 == 100 || 300){
+        std::cout << "You got a Scroll";
+    }
+    else{
+        std::cout << "tough luck, no rng :( ";
+    }
 
     return 0;
 }
